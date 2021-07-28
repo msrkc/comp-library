@@ -10,7 +10,7 @@ export interface TextareaProps
 
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ isResizable, ...props }, ref) => {
-    const id = useContext(FieldContext);
+    const { id } = useContext(FieldContext);
 
     return (
       <StyledTextarea ref={ref} id={id} isResizable={isResizable} {...props} />

@@ -6,7 +6,7 @@ export const Input = React.forwardRef<
   HTMLInputElement,
   React.ComponentPropsWithRef<'input'>
 >((props, ref) => {
-  const id = useField();
+  const { id } = useField();
 
   return <StyledInput ref={ref} id={id} />;
 });

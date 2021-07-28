@@ -12,9 +12,13 @@ interface FieldComposition {
 }
 
 export const Field: React.FC & FieldComposition = ({ children }) => {
-  const id = useId();
+  const nanoId = useId();
 
-  return <FieldContext.Provider value={id}>{children}</FieldContext.Provider>;
+  return (
+    <FieldContext.Provider value={{ id: nanoId }}>
+      {children}
+    </FieldContext.Provider>
+  );
 };
 
 Field.Label = Label;

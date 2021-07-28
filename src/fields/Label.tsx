@@ -6,7 +6,7 @@ export const Label = React.forwardRef<
   HTMLLabelElement,
   React.ComponentPropsWithoutRef<'label'>
 >((props, ref) => {
-  const id = useField();
+  const { id } = useField();
 
   return <StyledLabel ref={ref} htmlFor={id} {...props} />;
 });
